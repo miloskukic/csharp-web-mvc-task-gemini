@@ -1,9 +1,9 @@
-﻿@model Radnik
+﻿@model Radnik;
 <script src="/js/obracun-doprinosa.js"></script>
 <script src="/js/collapse-container.js"></script>
 <h2 class="m-4">Dodavanje novog radnika</h2>
 <div class="from-container mt-5" style="max-width:50%">
-    <form asp-action="Dodaj" method="post">
+    <form asp-action="Izmeni" method="post">
         <div class="mb-3 row">
             <label for="firstName" class="form-label">Ime</label>
             <input type="text" class="form-control" id="firstName" asp-for="Ime">
@@ -140,7 +140,7 @@
             </div>
         </div>
         <div class="row mb-3">
-            <input type="submit" class="btn btn-dark" value="Unesi korisnika">
+            <input type="submit" class="btn btn-dark" value="Izmeni korisnika">
             <a class="btn btn-light ml-3" asp-controller="Radnici" asp-action="Index">Odustani</a>
         </div>
     </form>

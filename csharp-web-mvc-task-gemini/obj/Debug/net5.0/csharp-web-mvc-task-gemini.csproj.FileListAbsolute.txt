@@ -72,3 +72,4 @@ C:\Users\Milos Kukic\source\repos\csharp-web-mvc-task-gemini\csharp-web-mvc-task
 C:\Users\Milos Kukic\source\repos\csharp-web-mvc-task-gemini\csharp-web-mvc-task-gemini\obj\Debug\net5.0\Razor\Views\Radnik\Dodaj.cshtml.g.cs
 C:\Users\Milos Kukic\source\repos\csharp-web-mvc-task-gemini\csharp-web-mvc-task-gemini\obj\Debug\net5.0\Razor\Views\Radnik\Index.cshtml.g.cs
 C:\Users\Milos Kukic\source\repos\csharp-web-mvc-task-gemini\csharp-web-mvc-task-gemini\obj\Debug\net5.0\Razor\Views\Radnik\Id.cshtml.g.cs
+C:\Users\Milos Kukic\source\repos\csharp-web-mvc-task-gemini\csharp-web-mvc-task-gemini\obj\Debug\net5.0\Razor\Views\Radnik\Izmeni.cshtml.g.cs

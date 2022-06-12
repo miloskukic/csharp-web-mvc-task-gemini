@@ -28,11 +28,9 @@
                         <td>@m.NetoPlata</td>
                         <td>@m.BrutoPlata</td>
                         <td>
-                            <!--<a asp-controller="Employee" asp-action="Edit" asp-route-Id="@m.Id">Edit</a>
-                        <a asp-controller="Radnik" asp-action="Id" asp-route-Id="@m.Id">Details</a>-->
-                            <a asp-controller="Radnik" asp-action="Dodaj" class="btn btn-dark mr-1" id="tableBtn"><i class="fa-solid fa-pencil"></i></a>
-                            <a asp-controller="Radnik" asp-action="Dodaj" class="btn btn-dark mr-1" id="tableBtn"><i class="fa-solid fa-trash-can"></i></a>
-                            <a asp-controller="Radnik" asp-action="Id" asp-route-Id="@m.Id" class="btn btn-dark" id="tableBtn"><i class="fa-solid fa-eye"></i></a>
+                                <a asp-controller="Radnik" asp-action="Izmeni" asp-route-Id="@m.Id" title="Izmeni" class="btn btn-dark mr-1" id="tableBtn"><i class="fa-solid fa-pencil"></i></a>
+                                <a onclick="return confirm('Želite da obrišete radnika?')" asp-controller="Radnik" asp-action="Obrisi" asp-route-Id="@m.Id" title="Obrisi" class="btn btn-dark mr-1" id="tableBtn"><i class='fa-solid fa-trash-can'></i></a>
+                                <a asp-controller="Radnik" asp-action="Id" asp-route-Id="@m.Id" title="Prikazi" class="btn btn-dark" id="tableBtn"><i class="fa-solid fa-eye"></i></a>
                         </td>
                     </tr>
                 }

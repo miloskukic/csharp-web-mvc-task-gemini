@@ -28,6 +28,13 @@
     padding: 5px 10px;
 }
 
+#collapseBtn {
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    border: 1px solid black;
+}
+
 #actionMenuBtn:focus,
 #actionMenuBtn:hover {
     border: 1px solid rgb(59, 69, 100);
@@ -36,6 +43,19 @@
 
 #emptyTableBtn:focus,
 #emptyTableBtn:hover {
+    border: 1px solid rgb(59, 69, 100);
+    box-shadow: 1px 1px 5px rgba(93, 107, 153, 0.9);
+}
+
+#tableBtn:focus,
+#tableBtn:hover {
+    border: 1px solid rgb(59, 69, 100);
+    box-shadow: 1px 1px 5px rgba(93, 107, 153, 0.9);
+}
+
+#collapseBtn:focus,
+#collapseBtn:hover {
+    cursor:pointer;
     border: 1px solid rgb(59, 69, 100);
     box-shadow: 1px 1px 5px rgba(93, 107, 153, 0.9);
 }
