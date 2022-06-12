@@ -1,9 +1,10 @@
 ﻿@model Radnik;
 <script src="/js/obracun-doprinosa.js"></script>
 <script src="/js/collapse-container.js"></script>
+<script src="/js/form-validation.js"></script>
 <h2 class="m-4">Dodavanje novog radnika</h2>
 <div class="from-container mt-5" style="max-width:50%">
-    <form asp-action="Izmeni" method="post">
+    <form asp-action="Izmeni" method="post" onsubmit="return formValidation()">
         <div class="mb-3 row">
             <label for="firstName" class="form-label">Ime</label>
             <input type="text" class="form-control" id="firstName" asp-for="Ime">
