@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Radnik>;
+<link rel="stylesheet" href="~/css/custom.css" />
+<h1>Radnici</h1>
+@if (@Model.Count() > 0)
+{
+    <a asp-controller="Radnik" asp-action="Dodaj" class="btn btn-dark" id="actionMenuBtn"><i class="fa-solid fa-user-plus mr-2"></i> Novi radnik</a>
+    <table class="table mt-5">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Ime</th>
+                <th>Prezime</th>
+                <th>Adresa</th>
+                <th>Neto plata</th>
+                <th>Bruto plata</th>
+                <th>Akcija</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var m in Model)
+            {
+            <tr>
+                <td>@m.Id</td>
+                <td>@m.Ime</td>
+                <td>@m.Prezime</td>
+                <td>@m.Adresa</td>
+                <td>@m.NetoPlata</td>
+                <td>@m.BrutoPlata</td>
+                <td>
+                <a asp-controller="Employee" asp-action="Edit" asp-route-Id="@m.Id">Edit</a>
+                <a asp-controller="Radnik" asp-action="Id" asp-route-Id="@m.Id">Details</a>
+                </td>
+            </tr>
+            }
+
+
+
+
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="row" id="emptyTableAlert">
+        <div class="col-12">
+            <h4 class="m-2">Nema radnika za prikaz</h4>
+        </div>
+        <div class="col-12">
+            <a asp-controller="Radnik" asp-action="Dodaj" class="btn btn-dark" id="emptyTableBtn"><i class="fa-solid fa-user-plus mr-2"></i>Dodaj novog radnika</a>
+        </div>
+    </div>
+}

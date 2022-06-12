@@ -1,11 +1,14 @@
+using csharp_web_mvc_task_gemini.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -23,6 +26,7 @@ namespace csharp_web_mvc_task_gemini
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefConnString")));
             services.AddControllersWithViews();
         }
 
@@ -52,6 +56,15 @@ namespace csharp_web_mvc_task_gemini
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseRequestLocalization();
+
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("sr-RS");
+            CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("sr-RS");
+
+            System.Globalization.CultureInfo customCulture = new CultureInfo("sr-RS");
+            customCulture.NumberFormat.NumberDecimalSeparator = ".";
+
         }
     }
 }
