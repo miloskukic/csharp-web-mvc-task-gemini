@@ -20,8 +20,8 @@
     </thead>
     <tbody>
         <tr>
-            <td>@Model.NetoPlata</td>
-            <td>@Model.BrutoPlata</td>
+            <td>@Model.NetoPlata.ToString("C0")<span class="currency">RSD</span></td>
+            <td>@Model.BrutoPlata.ToString("C0")<span class="currency">RSD</span></td>
         </tr>
     </tbody>
 </table>
@@ -38,9 +38,9 @@
         </thead>
         <tbody>
             <tr>
-                <td>@Model.PIO</td>
-                <td>@Model.Zdravstveno</td>
-                <td>@Model.Nezaposlenost</td>
+                <td>@Model.PIO.ToString("C0")<span class="currency">RSD</span></td>
+                <td>@Model.Zdravstveno.ToString("C0")<span class="currency">RSD</span></td>
+                <td>@Model.Nezaposlenost.ToString("C0")<span class="currency">RSD</span></td>
             </tr>
         </tbody>
     </table>
@@ -57,9 +57,9 @@
         </thead>
         <tbody>
             <tr>
-                <td>@Model.PIOPoslodavac</td>
-                <td>@Model.ZdravstvenoPoslodavac</td>
-                <td>@Model.NezaposlenostPoslodavac</td>
+                <td>@Model.PIOPoslodavac.ToString("C0")<span class="currency">RSD</span></td>
+                <td>@Model.ZdravstvenoPoslodavac.ToString("C0")<span class="currency">RSD</span></td>
+                <td>@Model.NezaposlenostPoslodavac.ToString("C0")<span class="currency">RSD</span></td>
             </tr>
         </tbody>
     </table>
@@ -72,31 +72,20 @@
             <tr>
                 <th>Porez</th>
                 <th>Minimalna osnovica</th>
+                <th>Ukupno</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>10%</td>
-                <td>30.880</td>
+                <td>30.880<span class="currency">RSD</span></td>
+                <td>3.088<span class="currency">RSD</span></td>
             </tr>
         </tbody>
     </table>
 </div>
 <h5>Ukupni troskovi</h5>
-<!--<hr />
-<div class="row">
-    <div class="col-2"><p>Ukupno - Doprinos radnika</p></div>
-    <div class="col-10">+<b>64,980</b></div>
-</div>
-<div class="row">
-    <div class="col-2"><p>Ukupno - Doprinos poslodavca</p></div>
-    <div class="col-10">+<b>64,980</b></div>
-</div>
-<div class="row">
-    <div class="col-2"><p>Porez na dohodak</p></div>
-    <div class="col-10">+<b>3080</b></div>
-</div>-->
 <hr />
-<div class="row" id="totalCost" style="border:1px solid black;padding:10px;">
-   <div class="col-12"><p>Ukupni troškovi radnika <b>@Model.UkupniTroskovi</b> <span>RSD</span></p></div>
+<div class="row" id="totalCost">
+   <div class="col-12"><p>Ukupni troškovi radnika <b>@Model.UkupniTroskovi.ToString("C0")</b> <span class="currency">RSD</span></p></div>
 </div>

@@ -25,8 +25,8 @@
                         <td>@m.Ime</td>
                         <td>@m.Prezime</td>
                         <td>@m.Adresa</td>
-                        <td>@m.NetoPlata</td>
-                        <td>@m.BrutoPlata</td>
+                        <td>@m.NetoPlata.ToString("C0")</td>
+                        <td>@m.BrutoPlata.ToString("C0")</td>
                         <td>
                                 <a asp-controller="Radnik" asp-action="Izmeni" asp-route-Id="@m.Id" title="Izmeni" class="btn btn-dark mr-1" id="tableBtn"><i class="fa-solid fa-pencil"></i></a>
                                 <a onclick="return confirm('Želite da obrišete radnika?')" asp-controller="Radnik" asp-action="Obrisi" asp-route-Id="@m.Id" title="Obrisi" class="btn btn-dark mr-1" id="tableBtn"><i class='fa-solid fa-trash-can'></i></a>

@@ -20,7 +20,7 @@ namespace csharp_web_mvc_task_gemini.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index","Radnici");
         }
 
         public IActionResult Id(int? id)

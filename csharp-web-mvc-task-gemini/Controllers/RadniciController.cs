@@ -19,31 +19,19 @@ namespace csharp_web_mvc_task_gemini.Controllers
         public IActionResult Index(Radnik radnik)
         {
             IEnumerable<Radnik> radnici = db.Radnici;
+            radnici.ToList().ForEach(i => i.Adresa = shortString(i.Adresa,15));
             return View(radnici);
         }
 
         
 
-        private double perctangeToValue(double number, double perctange)
+        private String shortString(String input, int length)
         {
-            if (perctange > 100)
+            if (input.Length > length)
             {
-                perctange = perctange * 0.0001;
-                Console.WriteLine("PERC100>" + perctange);
-                number = number * perctange;
+                input = input.Substring(0, length) + "...";
             }
-            else if (perctange > 10)
-            {
-                perctange = perctange * 0.001;
-                Console.WriteLine("PERC10>" + perctange);
-                number = number * perctange;
-            }
-            else
-            {
-                Console.WriteLine("PERC0>" + perctange);
-                number = number * perctange/100;
-            }
-            return number;
+            return input;
         }
     }
 }
