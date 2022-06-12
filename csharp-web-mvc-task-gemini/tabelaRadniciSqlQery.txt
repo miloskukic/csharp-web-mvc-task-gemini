@@ -1,0 +1,16 @@
+CREATE TABLE [dbo].[Radnici] (
+    [Id]                      INT            IDENTITY (1, 1) NOT NULL,
+    [Ime]                     NVARCHAR (MAX) NOT NULL,
+    [Prezime]                 NVARCHAR (MAX) NOT NULL,
+    [Adresa]                  NVARCHAR (MAX) NOT NULL,
+    [NetoPlata]               FLOAT (53)     NOT NULL,
+    [BrutoPlata]              FLOAT (53)     NOT NULL,
+    [PIO]                     FLOAT (53)     NOT NULL,
+    [Zdravstveno]             FLOAT (53)     NOT NULL,
+    [Nezaposlenost]           FLOAT (53)     NOT NULL,
+    [PIOPoslodavac]           FLOAT (53)     NOT NULL,
+    [ZdravstvenoPoslodavac]   FLOAT (53)     NOT NULL,
+    [NezaposlenostPoslodavac] FLOAT (53)     NOT NULL,
+    [UkupniTroskovi]          FLOAT (53)     NOT NULL,
+    CONSTRAINT [PK_Radnici] PRIMARY KEY CLUSTERED ([Id] ASC)
+);

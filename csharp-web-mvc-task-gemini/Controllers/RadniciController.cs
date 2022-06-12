@@ -1,5 +1,6 @@
 ﻿using csharp_web_mvc_task_gemini.Data;
 using csharp_web_mvc_task_gemini.Models;
+using csharp_web_mvc_task_gemini.Utils;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -16,22 +17,17 @@ namespace csharp_web_mvc_task_gemini.Controllers
         {
             this.db = db;
         }
+
+
         public IActionResult Index(Radnik radnik)
         {
             IEnumerable<Radnik> radnici = db.Radnici;
-            radnici.ToList().ForEach(i => i.Adresa = shortString(i.Adresa,15));
+            radnici.ToList().ForEach(i => i.Adresa = Tools.shortString(i.Adresa,15));
             return View(radnici);
         }
 
         
 
-        private String shortString(String input, int length)
-        {
-            if (input.Length > length)
-            {
-                input = input.Substring(0, length) + "...";
-            }
-            return input;
-        }
+    
     }
 }
