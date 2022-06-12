@@ -25,7 +25,9 @@ namespace csharp_web_mvc_task_gemini.Controllers
 
         public IActionResult Id(int? id)
         {
-            return View();
+            Radnik radnik = db.Radnici.Find(id);
+            //radnik.Ime = "Test";
+            return View(radnik);
         }
 
         public IActionResult Dodaj()
@@ -55,7 +57,8 @@ namespace csharp_web_mvc_task_gemini.Controllers
             // Console.WriteLine("Radnik>" + radnik.Ime + " " + radnik.Prezime + " " + radnik.Adresa + " " + radnik.NetoPlata + " PIO>"+radnik.PIO) ;
             db.Add(radnik);
             db.SaveChanges();
-            return RedirectToAction("Index","Radnici");
+            //Console.WriteLine("NEW-USER-ID>"+radnik.Id);
+            return RedirectToAction("Id","Radnik",new { Id = radnik.Id });
         }
     }
 }

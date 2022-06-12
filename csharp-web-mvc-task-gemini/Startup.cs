@@ -54,7 +54,7 @@ namespace csharp_web_mvc_task_gemini
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Radnici}/{action=Index}/{id?}");
             });
 
             app.UseRequestLocalization();
