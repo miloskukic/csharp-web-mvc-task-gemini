@@ -43,17 +43,17 @@ function formValidation() {
     if (lastNameErr) {
         lastName.css('border', '2px solid #8e0000');
     } else {
-        firstName.css('border', '0.5px solid #ced4da');
+        lastName.css('border', '0.5px solid #ced4da');
     }
     if (addressErr) {
         address.css('border', '2px solid #8e0000');
     } else {
-        firstName.css('border', '0.5px solid #ced4da');
+        address.css('border', '0.5px solid #ced4da');
     }
     if (netoSalaryErr) {
         netoSalary.css('border', '2px solid #8e0000');
     } else {
-        firstName.css('border', '0.5px solid #ced4da');
+        netoSalary.css('border', '0.5px solid #ced4da');
     }
 
     if (!firstNameErr && !lastNameErr && !addressErr && !netoSalaryErr) {
